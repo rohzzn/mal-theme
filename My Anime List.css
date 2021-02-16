@@ -1,0 +1,649 @@
+@\import "https://malscraper.azurewebsites.net/covers/auto/presets/datatitleafter";
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://dl.dropboxusercontent.com/s/gxv54l2le4f5wp0/Montserrat-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:focus
+{outline-color: transparent;
+outline-style: none;}
+
+*
+{text-decoration: none !important;}
+
+*:not(.fa)
+{font-family: "Montserrat" !important;
+font-size: 12px !important;
+font-weight: 400 !important;}
+
+body{
+background-color: #2C2F34;
+}
+
+.link.sort + a {display: none;} /* remove watch buttons */
+
+.header
+{position: fixed;
+top: 25px;
+left: 25px;
+width: 200px;
+height: 25px;
+z-index: 2;
+box-sizing: border-box;
+border: 1px solid #333333;
+border-radius: 25px;}
+
+.header a
+{color: #4d4d4d;}
+
+.header .header-title
+{background-image: none;
+text-indent: 0;
+line-height: 22px;
+top: 0;
+width: 100%;
+height: 100%;
+text-transform: lowercase;}
+
+.header .header-menu .btn-menu
+{display: none;}
+
+.header .header-menu .header-info
+{font-size: 0 !important;
+color: transparent !important;
+text-align: center;
+margin: auto;
+position: fixed;
+top: calc((100% - 90px)/ 2);
+left: 250px;
+width: 65px;
+height: 90px;}
+
+.header .header-menu .header-info a[href="/login.php"], .header .header-menu .header-info a[href="/register.php"]
+{font-size: 0 !important;
+color: transparent !important;}
+
+.header .header-menu .header-info a[href="/login.php"]::before, .header .header-menu .header-info a[href="/register.php"]::before
+{font-family: FontAwesome !important;
+color: #ffffff !important;
+display: block;
+margin: 5px auto;
+width: 35px;
+height: 35px;
+line-height: 33px;
+box-sizing: border-box;
+border: 1px solid transparent;
+border-radius: 100%;
+transition: .35s ease-in-out;}
+
+.header .header-menu .header-info a[href="/login.php"]:hover::before, .header .header-menu .header-info a[href="/register.php"]:hover::before
+{border: 1px solid #ffffff;}
+
+.header .header-menu .header-info a[href="/login.php"]::before
+{content: "\f090";
+font-size: 18px !important;}
+
+.header .header-menu .header-info a[href="/register.php"]::before
+{content: "\f234";
+font-size: 16px !important;}
+
+.header .header-menu .header-info a[href^="/sharedanime.php?"], .header .header-menu .header-info a[href^="/history/"]
+{display: none !important;}
+
+.header::before
+{content: "";
+display: block;
+width: 65px;
+height: 100%;
+position: fixed;
+top: 0;
+left: 250px;
+background-image: linear-gradient(180deg, #c2ffde 10%, #6283f4 100%);}
+
+.header::after
+{content: "";
+display: block;
+box-sizing: border-box;
+width: 200px;
+height: 280px;
+border: 1px solid #333333;
+border-radius: 15px;
+top: 60px;
+left: 25px;
+position: fixed;}
+
+.list-menu-float
+{left: 250px;
+width: 65px;
+border: 0;
+top: 50%;
+transform: translateY(-50%);}
+
+.list-menu-float:before
+{display: block;
+position: absolute;
+height: 100vh;
+width: 65px;
+top: calc((-100vh + 100%)/ 2);
+content: "";
+background-image: linear-gradient(180deg, #c2ffde 10%, #6283f4 100%);}
+
+.list-menu-float .icon-menu
+{width: 35px;
+height: 35px;
+box-sizing: border-box;
+background: transparent !important;
+border: 1px solid transparent;
+border-radius: 100%;
+left: 15px;
+margin: 5px 0;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: .35s ease-in-out;}
+
+.list-menu-float .icon-menu:hover
+{background-color: transparent !important;
+border: 1px solid #fff;
+width: 35px !important;}
+
+.list-menu-float .icon-menu svg.icon
+{fill: #fff;
+left: unset !important;
+top: unset !important;
+transition: .35s ease-in-out;
+width: 18px;}
+
+.list-menu-float .icon-menu.profile
+{background-image: none !important;
+color: #fff;}
+
+.list-menu-float .icon-menu.profile:before
+{content: "\f007";
+font-family: FontAwesome !important;
+font-size: 18px;}
+
+.list-menu-float .icon-menu .text, .list-menu-float .icon-menu.setting
+{display: none;}
+
+.list-container
+{width: 700px;
+min-height: calc(100vh - 100px);}
+
+.list-container *
+{max-width: 700px !important;}
+
+.cover-block
+{width: 178px;
+height: 258px;
+margin: 0;
+position: fixed;
+top: 71px;
+left: 36px;
+z-index: 2;
+border-radius: 14px;
+overflow: hidden;}
+
+.cover-block .image-container
+{padding: 0;}
+
+.cover-block .image-container .btn-list-setting
+{display: none !important;}
+
+.status-menu-container
+{width: 250px;
+height: 100vh;
+background-color: #141414;
+border: 0;
+position: fixed;
+top: 0;
+left: 0;}
+
+.status-menu-container .status-menu
+{display: flex;
+justify-content: space-between;
+width: 200px;
+position: fixed;
+bottom: 60px;
+left: 25px;}
+
+.status-menu-container .status-menu .status-button
+{padding: 0;
+text-align: center;
+font-size: 0 !important;
+width: 25px;
+height: 25px;
+border: 1px solid transparent;
+border-radius: 100%;
+transition: .35s ease-in-out;
+box-sizing: border-box;}
+
+.status-menu-container .status-menu .status-button.on, .status-menu-container .status-menu .status-button:hover
+{border: 1px solid #333;
+color: #4d4d4d !important;}
+
+.status-menu-container .status-menu .status-button::after
+{display: none !important;}
+
+.status-button:before
+{font-size: 12px !important;
+line-height: 25px;
+line-height: 20px;
+color: #4d4d4d !important;}
+
+.status-button.all_anime:before
+{content: "a";}
+
+.status-button.watching:before
+{content: "w";}
+
+.status-button.reading:before
+{content: "r";}
+
+.status-button.completed:before
+{content: "c";}
+
+.status-button.onhold:before
+{content: "h";}
+
+.status-button.dropped:before
+{content: "d";}
+
+.status-button.plantowatch:before, .status-button.plantoread:before
+{content: "p";}
+
+.status-menu-container .search-container
+{position: fixed;
+bottom: 25px;
+width: 200px;
+left: 25px;}
+
+.status-menu-container .search-container #search-box
+{display: inline-block;
+width: 200px !important;
+margin: 0;
+height: 25px;}
+
+.status-menu-container .search-container #search-box input
+{border: 1px solid #333333;
+background: transparent;
+border-radius: 25px;
+color: #4d4d4d;
+text-indent: 8px;}
+
+.status-menu-container .search-container #search-button
+{display: block;
+margin: 0;
+pointer-events: none;
+position: absolute;
+top: -1px;
+right: 8px;
+color: #4d4d4d;}
+
+.status-menu-container .search-container #search-button .fa.fa-search
+{line-height: 25px;}
+
+.list-container
+{position: relative;
+top: 25px;
+left: 340px;
+margin-right: unset;
+margin-left: unset;
+margin-bottom: 35px;
+background-color: transparent;
+border: 0;}
+
+.list-table
+{border: 0;}
+
+.list-block *
+{border: 0 !important;}
+
+.list-block, .status-menu-container.fixed + div.list-block
+{margin-top: 0;}
+
+.list-unit .list-status-title, .list-unit .list-stats
+{margin-bottom: 10px;}
+
+.list-unit .list-status-title, .list-table > tbody:nth-of-type(2n+1)
+{background-color: transparent;}
+
+.list-unit .list-status-title, .list-unit .list-status-title .text, .list-unit .list-status-title .stats
+{height: 22px;
+line-height: 22px;}
+
+.list-unit .list-status-title .text, .list-unit .list-status-title .stats a
+{color: #736e6d;}
+
+.list-stats
+{background: transparent !important;
+border: 1px solid #736e6d !important;
+box-sizing: border-box;
+height: 22px !important;
+line-height: 20px !important;
+border-radius: 11px;
+color: #736e6d !important;}
+
+[data-query*='"status":1'] .list-table .list-table-data .data.status, [data-query*='"status":1'] .list-table .list-table-header .header-title.status,
+[data-query*='"status":2'] .list-table .list-table-data .data.status, [data-query*='"status":2'] .list-table .list-table-header .header-title.status,
+[data-query*='"status":3'] .list-table .list-table-data .data.status, [data-query*='"status":3'] .list-table .list-table-header .header-title.status,
+[data-query*='"status":4'] .list-table .list-table-data .data.status, [data-query*='"status":4'] .list-table .list-table-header .header-title.status,
+[data-query*='"status":6'] .list-table .list-table-data .data.status, [data-query*='"status":6'] .list-table .list-table-header .header-title.status
+{display: none;}
+
+[data-query*='"status":7'] .list-table .list-table-data .data.title, [data-query*='"status":7'] .list-table .list-table-header .header-title.title
+{padding-left: 3px !important;}
+
+.list-item
+{height: 22px;}
+
+.list-table-header, .list-table-data, .list-table-header a, .list-table-data a, .list-table-data span, .list-table .list-table-header .header-title .sort-icon
+{color: #736e6d !important;
+transition: color .35s ease-in-out;}
+
+.list-table-data:hover .data, .list-table-data:hover .data a, .list-table-data:hover span
+{color: #f8f8ff !important;}
+
+.list-table .list-table-header .header-title
+{height: 22px;
+padding: 0 !important;
+border: 0 !important;
+background: none;}
+
+.list-table .list-table-data .data
+{padding: 0 !important;
+border: 0 !important;
+line-height: 22px;
+background: transparent !important;}
+
+.list-table .list-table-data .data.status::before
+{content: "";
+display: block;
+height: 7px;
+width: 7px;
+border-radius: 100%;
+box-sizing: border-box;
+border: 1px solid rgba(0,0,0,.3) !important;}
+
+.data.status.watching::before, .data.status.reading::before
+{background-color: #a2ecc4 !important;}
+
+.data.status.completed::before
+{background-color: #8ed0ff !important;}
+
+.data.status.onhold::before
+{background-color: #ffc800 !important;}
+
+.data.status.dropped::before
+{background-color: #f95a62 !important;}
+
+.data.status.plantowatch::before, .data.status.plantoread::before
+{background-color: #d1c8c5 !important;}
+
+.data.title .link.sort
+{display: inline-block;
+max-width: calc(100% - 72px) !important;
+overflow: hidden;
+text-overflow: ellipsis;
+height: 22px;
+white-space: nowrap;}
+
+.data.score select
+{border: 1px solid #736e6d !important;
+color: #736e6d;
+border-radius: 10px;
+appearance: none;
+-webkit-appearance: none; 
+-moz-appearance: none;}
+
+.data.score select option
+{color: #736e6d;}
+
+.data.progress input
+{border: 1px solid #736e6d !important;
+color: #736e6d;
+border-radius: 10px;
+text-align: center;
+height: 20px;
+box-sizing: border-box;}
+
+.list-table .list-table-data .data.title .rewatching, .list-table .list-table-data .data.title .rereading, .list-table .list-table-data .data.title .content-status, .list-table .list-table-data .data.title .add-edit-more a
+{font-size: 10px !important;
+text-transform: lowercase;
+display: inline-block;
+border: 1px solid !important;
+line-height: 10px;
+padding: 2px 4px;
+height: 16px;
+box-sizing: border-box;
+border-radius: 8px;
+color: #736e6d;}
+
+.content-status, .rewatching, .rereading
+{position: absolute;
+margin: 3px 0 0 3px;}
+
+.list-table .list-table-data .data.title .add-edit-more
+{font-size: 0 !important;
+margin: 3px 0 0 0;
+height: 16px;
+visibility: hidden;
+opacity: 0;
+transition: .35s ease-in-out;}
+
+.list-table .list-table-data .data.title .add-edit-more .more a
+{margin-left: 4px;}
+
+.list-item:hover .add-edit-more
+{visibility: visible !important;
+opacity: 1 !important;}
+
+.borderRBL, .borderRBL *
+{font-size: 10px !important;
+color: #736e6d;}
+
+.borderRBL a[href^="/forum/"]
+{display: block;
+height: 16px;
+width: 82px;
+border: 1px solid !important;
+border-radius: 8px;
+text-align: center;
+line-height: 14px;
+box-sizing: border-box;}
+
+#footer-block
+{background-color: transparent;
+width: 700px;
+margin-left: 340px;}
+
+#copyright
+{color: #736e6d;
+padding-top: 0;
+text-transform: lowercase;}
+
+#copyright::before
+{content: "Calatop's MyAnimeList";
+display: block;}
+
+/* ------------------------------- COVERS AREA ------------------------------- */
+
+.data.title [href^="/anime/"]:after, .data.title [href^="/manga/"]:after
+{content: "";
+display: block;
+position: fixed;
+box-sizing: border-box;
+z-index: 2;
+pointer-events: none;
+visibility: hidden;
+opacity: 0;
+transition: .35s ease-in-out;
+top: 71px;
+left: 36px;
+width: 178px;
+height: 258px;
+border-radius: 12px;
+background-position: center !important;
+background-repeat: no-repeat !important;
+background-size: cover;}
+
+.list-item:hover .data.title [href^="/anime/"]:after, .list-item:hover .data.title [href^="/manga/"]:after
+{visibility: visible;
+opacity: 1;}
+
+.list-table .list-table-data .data.image, .header-title.image
+{display: none !important;}
+
+/* -------------------------------- TAGS AREA -------------------------------- */
+
+.data.tags div
+{display: block;
+position: fixed;
+left: 25px;
+top: 350px;
+width: 200px;
+color: transparent !important;
+line-height: 1 !important;
+font-size: 0 !important;
+text-align: center;
+box-sizing: border-box;
+visibility: hidden;
+opacity: 0;
+transition: .35s ease-in-out;
+overflow: hidden;
+pointer-events: none;
+padding: 1px 0;
+z-index: 3;}
+
+div[class^="tags-"] span
+{font-size: 0 !important;}
+
+div[class^="tags-"] a
+{display: inline-block;
+margin: 2px;
+color: #4d4d4d !important;
+border: 1px solid #333333 !important;
+font-size: 10px !important;
+text-transform: lowercase;
+line-height: 10px;
+padding: 2px 4px;
+height: 16px;
+box-sizing: border-box;
+border-radius: 8px;}
+
+.list-table-data:hover div[class^="tags-"] a
+{color: #4d4d4d !important;}
+
+.data.tags .edit
+{display: none !important;}
+
+.list-item:hover .data.tags div
+{visibility: visible;
+opacity: 1;}
+
+.list-table .list-table-header .header-title.tags
+{width: 0 !important;
+font-size: 0 !important;
+color: transparent !important;}
+
+/* ------------------------------- FILTERS AREA ------------------------------- */
+
+#advanced-options
+{position: fixed;
+top: 0;
+left: 315px;
+background-color: #fff;
+width: 770px;
+margin: 0;
+padding: 25px;
+border: 0;
+box-shadow: none;
+color: #736e6d;
+height: 100%;}
+
+#advanced-options .advanced-options-header, #advanced-options .advanced-options-button
+{border: 0;}
+
+#advanced-options .advanced-options-header
+{padding: 10px 0;}
+
+#advanced-options .sort-widget, #advanced-options .advanced-options-button
+{padding: 10px 0 0 0;}
+
+#advanced-options .sort-widget:last-of-type, #advanced-options .filter-widget:last-of-type
+{padding-bottom: 10px;}
+
+#fancybox-overlay
+{background-color: transparent !important;}
+
+#advanced-options .btn-apply, #advanced-options .btn-clear
+{width: 100px;
+padding: 0;
+border-radius: 12px;
+height: 25px;
+line-height: 23px;
+box-sizing: border-box;
+background-color: #fff;
+border: 1px solid #736e6d;
+color: #736e6d;}
+
+#advanced-options .btn-apply:hover, #advanced-options .btn-clear:hover
+{background-color: #fff;}
+
+#advanced-options input, #advanced-options select, #advanced-options label
+{border-radius: 50px !important;
+border: 1px solid #736e6d !important;
+color: #736e6d !important;}
+
+#advanced-options select
+{background-image: none !important;}
+
+#advanced-options .sort-widget input[type="radio"]:checked + label
+{background-color: #736e6d;
+color: #fff !important;}
+
+#advanced-options .sort-widget input[type="radio"]:checked:disabled + label
+{color: #736e6d !important;}
+
+/* ---------------------------------- MISC ---------------------------------- */
+
+#fancybox-wrap
+{width: 700px !important;
+height: 100% !important;
+top: 0 !important;
+left: 315px !important;
+display: block;
+padding: 0 !important;
+margin-left: 25px !important;}
+
+div.fancy-bg
+{display: none;}
+
+#fancybox-inner
+{position: fixed !important;
+top: 0 !important;
+left: 340px !important;
+width: 700px !important;
+height: 100% !important;}
+
+#fancybox-close
+{position: fixed !important;
+left: 1013px !important;
+top: 5px !important;
+width: 22px !important;
+height: 22px !important;
+border-radius: 25px !important;
+background-image: none !important;
+background-color: #fff !important;
+text-align: center !important;
+line-height: 20px !important;
+border: 1px solid #736e6d;
+box-sizing: border-box;}
+
+#fancybox-close::before
+{content: "\f00d";
+font-family: FontAwesome !important;
+color: #736e6d !important;}
