@@ -67,7 +67,7 @@ height: 90px;}
 color: transparent !important;}
 
 .header .header-menu .header-info a[href="/login.php"]::before, .header .header-menu .header-info a[href="/register.php"]::before
-{font-family: FontAwesome !important;
+{font-family: "Montserrat" !important;
 color: #ffffff !important;
 display: block;
 margin: 5px auto;
@@ -101,7 +101,7 @@ height: 100%;
 position: fixed;
 top: 0;
 left: 250px;
-background-image: linear-gradient(180deg, #c2ffde 10%, #6283f4 100%);}
+background-image: linear-gradient(180deg, #FCC4FF 10%, #f49f62 100%);}
 
 .header::after
 {content: "";
@@ -129,7 +129,7 @@ height: 100vh;
 width: 65px;
 top: calc((-100vh + 100%)/ 2);
 content: "";
-background-image: linear-gradient(180deg, #c2ffde 10%, #6283f4 100%);}
+background-image: linear-gradient(180deg, #FCC4FF 10%, #f49f62 100%);}
 
 .list-menu-float .icon-menu
 {width: 35px;
@@ -163,7 +163,7 @@ color: #fff;}
 
 .list-menu-float .icon-menu.profile:before
 {content: "\f007";
-font-family: FontAwesome !important;
+font-family: "Montserrat"!important;
 font-size: 18px;}
 
 .list-menu-float .icon-menu .text, .list-menu-float .icon-menu.setting
@@ -372,13 +372,13 @@ border: 1px solid rgba(0,0,0,.3) !important;}
 {background-color: #a2ecc4 !important;}
 
 .data.status.completed::before
-{background-color: #8ed0ff !important;}
+{background-color: #feb5ff !important;} 
 
 .data.status.onhold::before
 {background-color: #ffc800 !important;}
 
 .data.status.dropped::before
-{background-color: #f95a62 !important;}
+{background-color: #f95a62 !important;} 
 
 .data.status.plantowatch::before, .data.status.plantoread::before
 {background-color: #d1c8c5 !important;}
@@ -645,5 +645,5 @@ box-sizing: border-box;}
 
 #fancybox-close::before
 {content: "\f00d";
-font-family: FontAwesome !important;
+font-family: "Montserrat" !important;
 color: #736e6d !important;}
